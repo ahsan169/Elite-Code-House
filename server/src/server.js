@@ -25,8 +25,10 @@ app.use('/api/services', require('./routes/service.routes'));
 app.use('/api/testimonials', require('./routes/testimonial.routes'));
 app.use('/api/blog', require('./routes/blog.routes'));
 app.use('/api/messages', require('./routes/message.routes'));
+app.use('/api/chat', require('./routes/chat.routes'));
 app.use('/api/upload', require('./routes/upload.routes'));
 app.use('/api/admin', require('./routes/admin.routes'));
+app.use('/api/create-room', require('./routes/room.routes'));
 
 app.get('/api/health', (req, res) => {
   res.json({ status: 'ok', timestamp: new Date().toISOString() });

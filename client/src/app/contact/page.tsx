@@ -1,9 +1,15 @@
 "use client";
 
 import { useState } from "react";
+import dynamic from "next/dynamic";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import CalendlyEmbed from "@/components/ui/CalendlyEmbed";
+
+const AppointmentVideoCall = dynamic(
+  () => import("@/components/contact/AppointmentVideoCall"),
+  { ssr: false }
+);
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -305,6 +311,22 @@ export default function ContactPage() {
                 url="https://calendly.com/ahsanchuadhry143?hide_event_type_details=1&hide_landing_page_details=1&hide_border=1&hide_gdpr_banner=1&timezone=America/New_York&background_color=1a1a2e&text_color=ffffff&primary_color=06b6d4"
                 height={700}
               />
+            </div>
+          </div>
+        </section>
+
+        <section className="py-24 bg-dark-200">
+          <div className="container mx-auto px-6 lg:px-8">
+            <div className="max-w-2xl mx-auto text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                <span className="italic font-serif text-primary-400">Instant</span> Live Call
+              </h2>
+              <p className="text-white/60">
+                Need to talk now? Start an instant audio or video call with our team. No scheduling required.
+              </p>
+            </div>
+            <div className="mx-auto max-w-2xl p-8 glass rounded-2xl">
+              <AppointmentVideoCall />
             </div>
           </div>
         </section>

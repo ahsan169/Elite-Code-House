@@ -9,21 +9,21 @@ const posts = [
     excerpt: "Learn the best practices for building production-ready SaaS applications using the MERN stack.",
     date: "Jan 15, 2024",
     readTime: "5 min read",
-    color: "#7ddafc"
+    image: "/blog/saas-platforms.jpg"
   },
   {
     title: "React Native vs Flutter: Which to Choose?",
     excerpt: "A comprehensive comparison of cross-platform mobile frameworks for your next project.",
     date: "Jan 10, 2024",
     readTime: "7 min read",
-    color: "#b7fe02"
+    image: "/blog/react-native-flutter.jpg"
   },
   {
     title: "Integrating AI into Your Web Applications",
     excerpt: "How to leverage AI APIs to add intelligent features to your MERN stack applications.",
     date: "Jan 5, 2024",
     readTime: "6 min read",
-    color: "#fe86a6"
+    image: "/blog/ai-web-apps.jpg"
   }
 ];
 
@@ -56,12 +56,13 @@ export default function BlogPreview() {
             >
               <Link href="/blog">
                 <div className="glass rounded-2xl overflow-hidden h-full group hover:bg-white/10 transition-all duration-300 cursor-pointer">
-                  <div
-                    className="h-48"
-                    style={{
-                      background: `linear-gradient(135deg, ${post.color}20, ${post.color}05)`
-                    }}
-                  />
+                  <div className="h-48 overflow-hidden">
+                    <img
+                      src={post.image}
+                      alt={post.title}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
+                  </div>
 
                   <div className="p-6">
                     <div className="flex items-center gap-4 text-sm text-white/40 mb-3">

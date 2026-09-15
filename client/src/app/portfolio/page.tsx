@@ -6,46 +6,76 @@ import Footer from "@/components/layout/Footer";
 
 const projects = [
   {
-    title: "SaaS Dashboard Platform",
-    category: "saas",
-    description: "Comprehensive analytics dashboard for SaaS businesses with real-time data visualization.",
-    technologies: ["React", "Node.js", "MongoDB", "Stripe"],
+    title: "AI Finance Dashboard",
+    category: "ai",
+    description: "Smart financial dashboard with AI-powered insights, cash flow analysis, and spending category breakdowns.",
+    technologies: ["React", "Node.js", "AI/ML", "Charts"],
+    image: "/portfolio/ai-finance.png",
     color: "#7ddafc"
   },
   {
-    title: "E-commerce Mobile App",
+    title: "SecureBank Mobile",
     category: "mobile",
-    description: "Cross-platform fashion e-commerce app with AR try-on features.",
-    technologies: ["React Native", "Node.js", "MongoDB"],
+    description: "Full-featured mobile banking app with account management, transactions, and fund transfers.",
+    technologies: ["React Native", "Node.js", "MongoDB", "Stripe"],
+    image: "/portfolio/securebank.png",
     color: "#b7fe02"
   },
   {
-    title: "AI Content Platform",
-    category: "ai",
-    description: "AI-powered content generation platform with GPT integration.",
-    technologies: ["Next.js", "OpenAI", "MongoDB"],
+    title: "LeadGen Pro",
+    category: "saas",
+    description: "Company research and lead generation tool with advanced search, enrichment, and bulk export capabilities.",
+    technologies: ["React", "Express", "MongoDB", "REST API"],
+    image: "/portfolio/leadgen-pro.png",
     color: "#fe86a6"
   },
   {
-    title: "Healthcare Portal",
-    category: "web",
-    description: "Patient management portal with appointment scheduling and telemedicine.",
-    technologies: ["React", "Express", "MongoDB", "WebRTC"],
+    title: "Apex Manufacturing CRM",
+    category: "saas",
+    description: "Sales pipeline management with Kanban view, quote generation, and opportunity tracking for manufacturers.",
+    technologies: ["React", "Node.js", "MongoDB", "WebSocket"],
+    image: "/portfolio/apex-manufacturing.png",
     color: "#977bf2"
   },
   {
-    title: "Food Delivery App",
-    category: "mobile",
-    description: "On-demand food delivery application with real-time tracking.",
-    technologies: ["React Native", "Node.js", "MongoDB", "Maps"],
+    title: "Housing Price Prediction",
+    category: "ai",
+    description: "ML-powered housing price prediction dashboard comparing Linear Regression, Decision Tree, Random Forest, and XGBoost models.",
+    technologies: ["Python", "TensorFlow", "React", "D3.js"],
+    image: "/portfolio/housing-prediction.png",
     color: "#edff75"
   },
   {
-    title: "Real Estate Platform",
-    category: "web",
-    description: "Property listing platform with advanced search and virtual tours.",
-    technologies: ["Next.js", "Express", "MongoDB"],
+    title: "Flight Delay Prediction",
+    category: "ai",
+    description: "Machine learning app predicting flight delays with probability analysis and performance overview charts.",
+    technologies: ["Python", "Scikit-learn", "React", "Recharts"],
+    image: "/portfolio/flight-prediction.png",
     color: "#7ddafc"
+  },
+  {
+    title: "PAF Token Platform",
+    category: "web",
+    description: "Crypto token platform with roadmap visualization, referral system, and whitepaper integration.",
+    technologies: ["Next.js", "Web3.js", "Solidity", "Tailwind"],
+    image: "/portfolio/paf-token.png",
+    color: "#fe86a6"
+  },
+  {
+    title: "Asset Library",
+    category: "web",
+    description: "Document management system with categorization, tagging, and organization-level access control.",
+    technologies: ["React", "Node.js", "MongoDB", "File Upload"],
+    image: "/portfolio/asset-library.png",
+    color: "#b7fe02"
+  },
+  {
+    title: "WP/WC Sync API",
+    category: "web",
+    description: "Multi-language API middleware for WordPress & WooCommerce with i18n JSON support and template transformation.",
+    technologies: ["Node.js", "Express", "WordPress API", "i18n"],
+    image: "/portfolio/wpwc-sync-api.png",
+    color: "#977bf2"
   }
 ];
 
@@ -111,12 +141,13 @@ export default function PortfolioPage() {
                   key={project.title}
                   className="group glass rounded-2xl overflow-hidden hover:bg-white/10 transition-all duration-300 cursor-pointer"
                 >
-                  <div
-                    className="h-48"
-                    style={{
-                      background: `linear-gradient(135deg, ${project.color}20, ${project.color}05)`
-                    }}
-                  />
+                  <div className="h-48 overflow-hidden">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
+                  </div>
                   <div className="p-6">
                     <span
                       className="text-xs font-medium uppercase tracking-wider"

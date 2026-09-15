@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import WhatsAppButton from "@/components/ui/WhatsAppButton";
+import ChatWidget from "@/components/chat/ChatWidget";
 
 export const metadata: Metadata = {
   title: {
@@ -54,7 +54,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className="min-h-full flex flex-col antialiased">
         {children}
-        <WhatsAppButton />
+        <ChatWidget />
       </body>
     </html>
   );

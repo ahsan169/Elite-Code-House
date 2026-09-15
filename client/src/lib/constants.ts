@@ -75,21 +75,43 @@ export const PROCESS_STEPS = [
 
 export const TESTIMONIALS = [
   {
-    quote: "Outstanding development team. They delivered our SaaS platform on time and exceeded all expectations.",
-    authorName: "Sarah Johnson",
-    authorRole: "CEO",
-    authorCompany: "TechStart Inc"
+    quote: "One of the best experiences I've had on Fiverr. He understood the assignment quickly, suggested a practical approach and delivered quality work before the deadline. I would confidently recommend him to anyone.",
+    authorName: "laxotoni",
+    authorRole: "Client",
+    authorCompany: "United Kingdom",
+    country: "United Kingdom",
+    flag: "🇬🇧"
   },
   {
-    quote: "The mobile app they built for us has received amazing user feedback. Highly recommended!",
-    authorName: "Michael Chen",
-    authorRole: "Founder",
-    authorCompany: "AppVenture"
+    quote: "Great experience working with Ahsan. Exceeded my expectations, quick communication, and even handled a last-minute request without any hassle. Would recommend to anyone!",
+    authorName: "aadaim_zampa2",
+    authorRole: "Client",
+    authorCompany: "Australia",
+    country: "Australia",
+    flag: "🇦🇺"
   },
   {
-    quote: "Professional, responsive, and technically excellent. They understood our vision perfectly.",
-    authorName: "Emily Rodriguez",
-    authorRole: "CTO",
-    authorCompany: "DigitalFirst"
+    quote: "Great communication and delivered exactly what was needed. Would hire again!",
+    authorName: "wailiam_david12",
+    authorRole: "Client",
+    authorCompany: "United Kingdom",
+    country: "United Kingdom",
+    flag: "🇬🇧"
+  },
+  {
+    quote: "Great experience! Fast delivery, clean Python script, and accurate CSV data extraction. Highly recommended.",
+    authorName: "dayrlmak",
+    authorRole: "Client",
+    authorCompany: "United States",
+    country: "United States",
+    flag: "🇺🇸"
+  },
+  {
+    quote: "Excellent approach and very professional work.",
+    authorName: "Mmanglo777",
+    authorRole: "Client",
+    authorCompany: "United States",
+    country: "United States",
+    flag: "🇺🇸"
   }
 ];

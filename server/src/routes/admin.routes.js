@@ -7,6 +7,7 @@ const serviceController = require('../controllers/service.controller');
 const testimonialController = require('../controllers/testimonial.controller');
 const blogController = require('../controllers/blog.controller');
 const messageController = require('../controllers/message.controller');
+const chatController = require('../controllers/chat.controller');
 
 router.use(protect);
 
@@ -33,5 +34,10 @@ router.delete('/blog/:id', blogController.delete);
 router.get('/messages', messageController.getAll);
 router.put('/messages/:id/read', messageController.markAsRead);
 router.delete('/messages/:id', messageController.delete);
+
+router.get('/chats', chatController.getAllChats);
+router.get('/chats/stats', chatController.getChatStats);
+router.get('/chats/:conversationId', chatController.getChatDetails);
+router.put('/chats/:conversationId/close', chatController.closeChat);
 
 module.exports = router;

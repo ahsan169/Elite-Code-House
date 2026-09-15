@@ -9,16 +9,20 @@ import {
   FaQuoteLeft,
   FaBlog,
   FaEnvelope,
-  FaCog
+  FaCog,
+  FaPhone,
+  FaComments
 } from "react-icons/fa";
 
 const menuItems = [
   { label: "Dashboard", href: "/admin", icon: FaHome },
+  { label: "Live Calls", href: "/admin/calls", icon: FaPhone },
   { label: "Projects", href: "/admin/portfolio", icon: FaBriefcase },
   { label: "Services", href: "/admin/services", icon: FaCogs },
   { label: "Testimonials", href: "/admin/testimonials", icon: FaQuoteLeft },
   { label: "Blog", href: "/admin/blog", icon: FaBlog },
   { label: "Messages", href: "/admin/messages", icon: FaEnvelope },
+  { label: "Live Chats", href: "/admin/chats", icon: FaComments },
   { label: "Settings", href: "/admin/settings", icon: FaCog }
 ];
 
