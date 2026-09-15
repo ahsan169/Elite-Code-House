@@ -135,13 +135,13 @@ export default function PortfolioPage() {
 
         <section className="py-16 bg-dark-200">
           <div className="container mx-auto px-6 lg:px-8">
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 pt-4 -mt-4">
               {filteredProjects.map((project) => (
                 <div
                   key={project.title}
-                  className="group glass rounded-2xl overflow-hidden hover:bg-white/10 transition-all duration-300 cursor-pointer"
+                  className="group glass cursor-pointer"
                 >
-                  <div className="h-48 overflow-hidden">
+                  <div className="h-48 overflow-hidden rounded-t-2xl">
                     <img
                       src={project.image}
                       alt={project.title}

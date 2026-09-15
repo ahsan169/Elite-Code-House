@@ -21,7 +21,7 @@ export default function ProcessSteps() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-8 pt-4 -mt-4">
           {PROCESS_STEPS.map((step, index) => (
             <motion.div
               key={step.step}
@@ -29,7 +29,7 @@ export default function ProcessSteps() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.2 }}
-              className="relative p-8 glass rounded-2xl group hover:bg-white/10 transition-all duration-300"
+              className="glass p-8 relative group"
             >
               <div className="text-6xl font-bold text-white/10 mb-4 group-hover:text-primary-500/20 transition-colors">
                 {step.step}

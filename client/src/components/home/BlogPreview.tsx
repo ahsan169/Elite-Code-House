@@ -45,7 +45,7 @@ export default function BlogPreview() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-8 pt-4 -mt-4">
           {posts.map((post, index) => (
             <motion.article
               key={post.title}
@@ -55,8 +55,8 @@ export default function BlogPreview() {
               transition={{ delay: index * 0.2 }}
             >
               <Link href="/blog">
-                <div className="glass rounded-2xl overflow-hidden h-full group hover:bg-white/10 transition-all duration-300 cursor-pointer">
-                  <div className="h-48 overflow-hidden">
+                <div className="glass h-full group cursor-pointer">
+                  <div className="h-48 overflow-hidden rounded-t-2xl">
                     <img
                       src={post.image}
                       alt={post.title}

@@ -8,7 +8,7 @@ export default function TrustBar() {
   return (
     <section className="py-12 bg-dark-200 border-y border-white/5">
       <div className="container mx-auto px-6 lg:px-8">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-4 -mt-4">
           {STATS.map((stat, index) => (
             <motion.div
               key={stat.label}
@@ -16,7 +16,7 @@ export default function TrustBar() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="text-center"
+              className="glass-stat p-6 text-center"
             >
               <div className="text-4xl md:text-5xl font-bold text-white mb-2">
                 <Counter target={stat.value} suffix={stat.suffix} />

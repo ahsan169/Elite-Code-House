@@ -42,7 +42,7 @@ export default function FeaturedWork() {
     const scroll = () => {
       if (!isHovering.current || !scrollRef.current) return;
       const el = scrollRef.current;
-      el.scrollLeft += 1.5;
+      el.scrollLeft += 0.8;
       if (el.scrollLeft >= el.scrollWidth - el.clientWidth) {
         el.scrollLeft = 0;
       }
@@ -88,7 +88,7 @@ export default function FeaturedWork() {
           ref={scrollRef}
           onMouseEnter={startAutoScroll}
           onMouseLeave={stopAutoScroll}
-          className="overflow-x-auto scrollbar-hide -mx-6 px-6 lg:-mx-8 lg:px-8"
+          className="overflow-x-scroll-y-visible scrollbar-hide -mx-6 px-6 lg:-mx-8 lg:px-8 pt-4 -mt-4"
         >
           <div className="flex gap-6 pb-4">
             {projects.map((project, index) => (

@@ -23,7 +23,7 @@ const Badge = forwardRef<HTMLSpanElement, BadgeProps>(
       default: colorMap[color],
       accent: colorMap[color],
       outline: "border border-white/20 text-white",
-      glass: "glass text-white"
+      glass: "glass-pill text-white"
     };
 
     return (

@@ -29,6 +29,12 @@
   :root {
     --background: #ffffff;
     --foreground: #1a1a1a;
+    --glass-bg: linear-gradient(145deg, rgba(30, 41, 59, 0.55), rgba(15, 23, 42, 0.75));
+    --glass-border: rgba(148, 163, 184, 0.12);
+    --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    --accent-cyan: #38BDF8;
+    --accent-purple: #A855F7;
+    --glass-hover-shadow: 0 20px 40px -12px rgba(56, 189, 248, 0.18);
   }
 
   body {
@@ -56,10 +62,107 @@
   }
 
   .glass {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: var(--glass-bg);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    box-shadow: var(--glass-shadow);
+    position: relative;
+    transition: all 0.3s ease;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .glass:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--glass-hover-shadow);
+    }
+
+    .glass::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 16px;
+      padding: 1px;
+      background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      pointer-events: none;
+    }
+
+    .glass:hover::before {
+      opacity: 1;
+    }
+  }
+
+  .glass-stat {
+    background: var(--glass-bg);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    box-shadow: var(--glass-shadow);
+    border-top: 2px solid var(--accent-cyan);
+    position: relative;
+    transition: all 0.3s ease;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .glass-stat:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--glass-hover-shadow);
+    }
+
+    .glass-stat::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 16px;
+      padding: 1px;
+      background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      pointer-events: none;
+    }
+
+    .glass-stat:hover::before {
+      opacity: 1;
+    }
+  }
+
+  .glass-icon {
+    background: rgba(var(--icon-rgb, 56, 189, 248), 0.1);
+    border: 1px solid rgba(var(--icon-rgb, 56, 189, 248), 0.2);
+    box-shadow: 0 0 20px rgba(var(--icon-rgb, 56, 189, 248), 0.15);
+  }
+
+  .glass-pill {
+    background: rgba(30, 41, 59, 0.5);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(56, 189, 248, 0.15);
+    border-radius: 9999px;
+    transition: all 0.3s ease;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .glass-pill:hover {
+      background: rgba(30, 41, 59, 0.7);
+      border-color: rgba(56, 189, 248, 0.3);
+    }
+  }
+
+  .glass-quote {
+    color: var(--accent-cyan);
+    filter: drop-shadow(0 0 8px rgba(56, 189, 248, 0.4));
   }
 
   .calendly-inline-widget {
@@ -89,11 +192,11 @@
   }
 
   .animate-marquee {
-    animation: marquee 30s linear infinite;
+    animation: marquee 48s linear infinite;
   }
 
   .animate-marquee-slow {
-    animation: marquee 60s linear infinite;
+    animation: marquee 80s linear infinite;
   }
 
   .animate-float {
@@ -183,4 +286,9 @@
 .scrollbar-hide {
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+
+.overflow-x-scroll-y-visible {
+  overflow-x: auto;
+  overflow-y: visible;
 }

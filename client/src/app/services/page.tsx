@@ -74,11 +74,11 @@ export default function ServicesPage() {
 
         <section className="py-24 bg-dark-200">
           <div className="container mx-auto px-6 lg:px-8">
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 pt-4 -mt-4">
               {services.map((service) => (
                 <div
                   key={service.title}
-                  className="p-8 glass rounded-2xl hover:bg-white/10 transition-all duration-300"
+                  className="p-8 glass"
                 >
                   <div className="text-4xl mb-4">{service.icon}</div>
                   <h3 className="text-2xl font-bold text-white mb-3">

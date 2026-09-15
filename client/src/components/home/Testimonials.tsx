@@ -5,6 +5,23 @@ import { motion } from "framer-motion";
 import { TESTIMONIALS } from "@/lib/constants";
 import { FaQuoteLeft, FaStar } from "react-icons/fa";
 
+const avatarColors = [
+  "bg-accent-cyan/30 text-accent-cyan",
+  "bg-accent-purple/30 text-accent-purple",
+  "bg-accent-pink/30 text-accent-pink",
+  "bg-accent-lime/30 text-accent-lime",
+  "bg-accent-yellow/30 text-accent-yellow"
+];
+
+function getInitials(name: string): string {
+  return name
+    .split(/[_\s]+/)
+    .filter(Boolean)
+    .slice(0, 2)
+    .map((w) => w.charAt(0).toUpperCase())
+    .join("");
+}
+
 export default function Testimonials() {
   const scrollRef = useRef<HTMLDivElement>(null);
   const isHovering = useRef(false);
@@ -15,7 +32,7 @@ export default function Testimonials() {
     const scroll = () => {
       if (!isHovering.current || !scrollRef.current) return;
       const el = scrollRef.current;
-      el.scrollLeft += 1.5;
+      el.scrollLeft += 0.8;
       if (el.scrollLeft >= el.scrollWidth - el.clientWidth) {
         el.scrollLeft = 0;
       }
@@ -50,7 +67,7 @@ export default function Testimonials() {
           ref={scrollRef}
           onMouseEnter={startAutoScroll}
           onMouseLeave={stopAutoScroll}
-          className="overflow-x-auto scrollbar-hide -mx-6 px-6 lg:-mx-8 lg:px-8"
+          className="overflow-x-scroll-y-visible scrollbar-hide -mx-6 px-6 lg:-mx-8 lg:px-8 pt-4 -mt-4"
         >
           <div className="flex gap-8 pb-4">
             {TESTIMONIALS.map((testimonial, index) => (
@@ -60,9 +77,9 @@ export default function Testimonials() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.2 }}
-                className="flex-shrink-0 w-[320px] md:w-[400px] p-8 glass rounded-2xl relative"
+                className="flex-shrink-0 w-[320px] md:w-[400px] glass p-8 relative"
               >
-                <FaQuoteLeft className="text-primary-500/20 text-4xl mb-4" />
+                <FaQuoteLeft className="glass-quote text-4xl mb-4" />
 
                 <div className="flex gap-1 mb-4">
                   {[...Array(5)].map((_, i) => (
@@ -75,13 +92,13 @@ export default function Testimonials() {
                 </p>
 
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full bg-primary-500/20 flex items-center justify-center">
-                    <span className="text-xl">{testimonial.flag}</span>
+                  <div className={`w-12 h-12 rounded-full flex items-center justify-center font-bold text-sm ${avatarColors[index % avatarColors.length]}`}>
+                    {getInitials(testimonial.authorName)}
                   </div>
                   <div>
                     <div className="font-bold text-white">{testimonial.authorName}</div>
-                    <div className="text-sm text-white/60 flex items-center gap-1">
-                      <span>{testimonial.flag}</span>
+                    <div className="text-sm text-white/60 flex items-center gap-1.5">
+                      <span className="text-base leading-none">{testimonial.flag}</span>
                       <span>{testimonial.country}</span>
                     </div>
                   </div>

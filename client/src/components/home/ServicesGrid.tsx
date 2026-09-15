@@ -14,6 +14,13 @@ const iconMap: Record<string, React.ComponentType<Record<string, unknown>>> = {
   ShoppingCart: FaShoppingCart
 };
 
+function hexToRgb(hex: string): string {
+  const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+  return result
+    ? `${parseInt(result[1], 16)}, ${parseInt(result[2], 16)}, ${parseInt(result[3], 16)}`
+    : "56, 189, 248";
+}
+
 export default function ServicesGrid() {
   const scrollRef = useRef<HTMLDivElement>(null);
   const isHovering = useRef(false);
@@ -24,7 +31,7 @@ export default function ServicesGrid() {
     const scroll = () => {
       if (!isHovering.current || !scrollRef.current) return;
       const el = scrollRef.current;
-      el.scrollLeft += 1.5;
+      el.scrollLeft += 0.8;
       if (el.scrollLeft >= el.scrollWidth - el.clientWidth) {
         el.scrollLeft = 0;
       }
@@ -59,11 +66,12 @@ export default function ServicesGrid() {
           ref={scrollRef}
           onMouseEnter={startAutoScroll}
           onMouseLeave={stopAutoScroll}
-          className="overflow-x-auto scrollbar-hide -mx-6 px-6 lg:-mx-8 lg:px-8"
+          className="overflow-x-scroll-y-visible scrollbar-hide -mx-6 px-6 lg:-mx-8 lg:px-8 pt-4 -mt-4"
         >
           <div className="flex gap-6 pb-4">
             {SERVICES.map((service, index) => {
               const Icon = iconMap[service.icon] || FaGlobe;
+              const iconRgb = hexToRgb(service.accentColor);
               return (
                 <motion.div
                   key={service.title}
@@ -74,10 +82,10 @@ export default function ServicesGrid() {
                   className="flex-shrink-0 w-[300px] md:w-[350px]"
                 >
                   <Link href="/services">
-                    <div className="p-6 glass rounded-2xl h-full group hover:bg-white/10 transition-all duration-300 cursor-pointer">
+                    <div className="glass p-6 h-full group cursor-pointer">
                       <div
-                        className="w-12 h-12 rounded-xl flex items-center justify-center mb-4"
-                        style={{ backgroundColor: `${service.accentColor}20` }}
+                        className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 glass-icon"
+                        style={{ "--icon-rgb": iconRgb } as React.CSSProperties}
                       >
                         <Icon size={24} style={{ color: service.accentColor }} />
                       </div>

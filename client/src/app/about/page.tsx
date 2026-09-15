@@ -98,19 +98,19 @@ export default function AboutPage() {
               </div>
 
               <div className="grid grid-cols-2 gap-6">
-                <div className="p-6 glass rounded-2xl text-center">
+                <div className="glass-stat p-6 text-center">
                   <Counter target={300} suffix="+" className="text-4xl font-bold text-white mb-2" />
                   <div className="text-sm text-white/60">Projects Delivered</div>
                 </div>
-                <div className="p-6 glass rounded-2xl text-center">
+                <div className="glass-stat p-6 text-center">
                   <Counter target={300} suffix="+" className="text-4xl font-bold text-white mb-2" />
                   <div className="text-sm text-white/60">Happy Clients</div>
                 </div>
-                <div className="p-6 glass rounded-2xl text-center">
+                <div className="glass-stat p-6 text-center">
                   <div className="text-4xl font-bold text-white mb-2">5+</div>
                   <div className="text-sm text-white/60">Years Experience</div>
                 </div>
-                <div className="p-6 glass rounded-2xl text-center">
+                <div className="glass-stat p-6 text-center">
                   <div className="text-4xl font-bold text-white mb-2">24/7</div>
                   <div className="text-sm text-white/60">Support Available</div>
                 </div>
@@ -126,11 +126,11 @@ export default function AboutPage() {
               <span className="italic font-serif text-primary-400">Values</span>
             </h2>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 pt-4 -mt-4">
               {values.map((value) => (
                 <div
                   key={value.title}
-                  className="p-6 glass rounded-2xl text-center"
+                  className="glass p-6 text-center"
                 >
                   <div className="text-4xl mb-4">{value.icon}</div>
                   <h3 className="text-xl font-bold text-white mb-2">{value.title}</h3>
