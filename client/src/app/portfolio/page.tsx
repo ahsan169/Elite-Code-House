@@ -10,7 +10,7 @@ const projects = [
     category: "ai",
     description: "Smart financial dashboard with AI-powered insights, cash flow analysis, and spending category breakdowns.",
     technologies: ["React", "Node.js", "AI/ML", "Charts"],
-    image: "/portfolio/ai-finance.png",
+    image: "/portfolio/securebank.png",
     color: "#7ddafc"
   },
   {
@@ -18,7 +18,7 @@ const projects = [
     category: "mobile",
     description: "Full-featured mobile banking app with account management, transactions, and fund transfers.",
     technologies: ["React Native", "Node.js", "MongoDB", "Stripe"],
-    image: "/portfolio/securebank.png",
+    image: "/portfolio/housing-prediction.png",
     color: "#b7fe02"
   },
   {
@@ -42,7 +42,7 @@ const projects = [
     category: "ai",
     description: "ML-powered housing price prediction dashboard comparing Linear Regression, Decision Tree, Random Forest, and XGBoost models.",
     technologies: ["Python", "TensorFlow", "React", "D3.js"],
-    image: "/portfolio/housing-prediction.png",
+    image: "/portfolio/ai-finance.png",
     color: "#edff75"
   },
   {
@@ -135,20 +135,20 @@ export default function PortfolioPage() {
 
         <section className="py-16 bg-dark-200">
           <div className="container mx-auto px-6 lg:px-8">
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 pt-4 -mt-4">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 pt-4">
               {filteredProjects.map((project) => (
                 <div
                   key={project.title}
-                  className="group glass cursor-pointer"
+                  className="group glass cursor-pointer overflow-hidden"
                 >
-                  <div className="h-48 overflow-hidden rounded-t-2xl">
+                  <div className="aspect-[16/10] overflow-hidden">
                     <img
                       src={project.image}
                       alt={project.title}
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-110"
                     />
                   </div>
-                  <div className="p-6">
+                  <div className="p-5">
                     <span
                       className="text-xs font-medium uppercase tracking-wider"
                       style={{ color: project.color }}
