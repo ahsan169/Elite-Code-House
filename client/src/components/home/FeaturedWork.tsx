@@ -21,13 +21,13 @@ const projects = [
   {
     title: "LeadGen Pro",
     category: "SaaS",
-    image: "/portfolio/leadgen-pro.png",
+    image: "/portfolio/flight-prediction.png",
     color: "#fe86a6"
   },
   {
     title: "Apex Manufacturing CRM",
     category: "SaaS",
-    image: "/portfolio/apex-manufacturing.png",
+    image: "/portfolio/asset-library.png",
     color: "#977bf2"
   }
 ];
@@ -66,7 +66,7 @@ export default function FeaturedWork() {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              Featured <span className="italic font-serif text-primary-400">Work</span>
+              Featured <span className="italic font-serif text-primary-400 gradient-text">Work</span>
             </h2>
             <p className="text-white/60 max-w-lg">
               A selection of projects we&apos;re proud of

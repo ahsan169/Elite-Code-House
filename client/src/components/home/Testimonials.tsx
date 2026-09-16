@@ -56,7 +56,7 @@ export default function Testimonials() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Client <span className="italic font-serif text-primary-400">Stories</span>
+            Client <span className="italic font-serif text-primary-400 gradient-text">Stories</span>
           </h2>
           <p className="text-white/60 max-w-2xl mx-auto">
             What our clients say about working with us
@@ -92,14 +92,13 @@ export default function Testimonials() {
                 </p>
 
                 <div className="flex items-center gap-4">
-                  <div className={`w-12 h-12 rounded-full flex items-center justify-center font-bold text-sm ${avatarColors[index % avatarColors.length]}`}>
+                  <div className={`w-14 h-14 rounded-full flex items-center justify-center font-semibold text-sm ring-2 ring-white/10 ${avatarColors[index % avatarColors.length]}`}>
                     {getInitials(testimonial.authorName)}
                   </div>
                   <div>
                     <div className="font-bold text-white">{testimonial.authorName}</div>
                     <div className="text-sm text-white/60 flex items-center gap-1.5">
-                      <span className="text-base leading-none">{testimonial.flag}</span>
-                      <span>{testimonial.country}</span>
+                      <span className={`fi fi-${testimonial.countryCode} fis text-base leading-none`} />
                     </div>
                   </div>
                 </div>

@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "flag-icons/css/flag-icons.min.css";
 
 @theme inline {
   --color-background: var(--background);
@@ -291,4 +292,26 @@
 .overflow-x-scroll-y-visible {
   overflow-x: auto;
   overflow-y: visible;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #38BDF8, #A855F7, #38BDF8);
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: gradientWave 6s ease-in-out infinite;
+}
+
+@keyframes gradientWave {
+  0% { background-position: 0% center; }
+  50% { background-position: 100% center; }
+  100% { background-position: 0% center; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gradient-text {
+    animation: none;
+    background-position: 0% center;
+  }
 }

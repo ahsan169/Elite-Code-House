@@ -19,7 +19,7 @@ export default function AboutPreview() {
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
               Building Digital
               <br />
-              <span className="italic font-serif text-primary-400">Excellence</span>
+              <span className="italic font-serif text-primary-400 gradient-text">Excellence</span>
               <br />
               Since 2021
             </h2>

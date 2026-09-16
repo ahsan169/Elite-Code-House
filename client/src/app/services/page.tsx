@@ -62,7 +62,7 @@ export default function ServicesPage() {
             <div className="max-w-3xl">
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6">
                 Our{" "}
-                <span className="italic font-serif text-primary-400">Services</span>
+                <span className="italic font-serif text-primary-400 gradient-text">Services</span>
               </h1>
               <p className="text-xl text-white/60">
                 End-to-end development solutions tailored to your business needs.
@@ -119,7 +119,7 @@ export default function ServicesPage() {
           <div className="container mx-auto px-6 lg:px-8 text-center">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Start Your{" "}
-              <span className="italic font-serif text-primary-400">Project</span>?
+              <span className="italic font-serif text-primary-400 gradient-text">Project</span>?
             </h2>
             <p className="text-lg text-white/60 mb-10 max-w-xl mx-auto">
               Let&apos;s discuss your requirements and see how we can help bring your vision to life.

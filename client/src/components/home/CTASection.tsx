@@ -22,7 +22,7 @@ export default function CTASection() {
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
             Ready to Build
             <br />
-            <span className="italic font-serif text-primary-400">Something Amazing</span>?
+            <span className="italic font-serif text-primary-400 gradient-text">Something Amazing</span>?
           </h2>
 
           <p className="text-lg text-white/60 mb-10 max-w-xl mx-auto">

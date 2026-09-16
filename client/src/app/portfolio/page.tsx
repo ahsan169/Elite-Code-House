@@ -11,7 +11,6 @@ const projects = [
     description: "Smart financial dashboard with AI-powered insights, cash flow analysis, and spending category breakdowns.",
     technologies: ["React", "Node.js", "AI/ML", "Charts"],
     image: "/portfolio/securebank.png",
-    color: "#7ddafc"
   },
   {
     title: "SecureBank Mobile",
@@ -19,23 +18,20 @@ const projects = [
     description: "Full-featured mobile banking app with account management, transactions, and fund transfers.",
     technologies: ["React Native", "Node.js", "MongoDB", "Stripe"],
     image: "/portfolio/housing-prediction.png",
-    color: "#b7fe02"
   },
   {
     title: "LeadGen Pro",
     category: "saas",
     description: "Company research and lead generation tool with advanced search, enrichment, and bulk export capabilities.",
     technologies: ["React", "Express", "MongoDB", "REST API"],
-    image: "/portfolio/leadgen-pro.png",
-    color: "#fe86a6"
+    image: "/portfolio/flight-prediction.png",
   },
   {
     title: "Apex Manufacturing CRM",
     category: "saas",
     description: "Sales pipeline management with Kanban view, quote generation, and opportunity tracking for manufacturers.",
     technologies: ["React", "Node.js", "MongoDB", "WebSocket"],
-    image: "/portfolio/apex-manufacturing.png",
-    color: "#977bf2"
+    image: "/portfolio/asset-library.png",
   },
   {
     title: "Housing Price Prediction",
@@ -43,31 +39,27 @@ const projects = [
     description: "ML-powered housing price prediction dashboard comparing Linear Regression, Decision Tree, Random Forest, and XGBoost models.",
     technologies: ["Python", "TensorFlow", "React", "D3.js"],
     image: "/portfolio/ai-finance.png",
-    color: "#edff75"
   },
   {
     title: "Flight Delay Prediction",
     category: "ai",
     description: "Machine learning app predicting flight delays with probability analysis and performance overview charts.",
     technologies: ["Python", "Scikit-learn", "React", "Recharts"],
-    image: "/portfolio/flight-prediction.png",
-    color: "#7ddafc"
+    image: "/portfolio/leadgen-pro.png",
   },
   {
     title: "PAF Token Platform",
     category: "web",
     description: "Crypto token platform with roadmap visualization, referral system, and whitepaper integration.",
     technologies: ["Next.js", "Web3.js", "Solidity", "Tailwind"],
-    image: "/portfolio/paf-token.png",
-    color: "#fe86a6"
+    image: "/portfolio/paf-token-platform.png",
   },
   {
     title: "Asset Library",
     category: "web",
     description: "Document management system with categorization, tagging, and organization-level access control.",
     technologies: ["React", "Node.js", "MongoDB", "File Upload"],
-    image: "/portfolio/asset-library.png",
-    color: "#b7fe02"
+    image: "/portfolio/apex-manufacturing.png",
   },
   {
     title: "WP/WC Sync API",
@@ -75,7 +67,13 @@ const projects = [
     description: "Multi-language API middleware for WordPress & WooCommerce with i18n JSON support and template transformation.",
     technologies: ["Node.js", "Express", "WordPress API", "i18n"],
     image: "/portfolio/wpwc-sync-api.png",
-    color: "#977bf2"
+  },
+  {
+    title: "Mobile App Platform",
+    category: "mobile",
+    description: "Modern e-commerce mobile application with product browsing, advanced filtering, and personalized discovery features.",
+    technologies: ["React Native", "Node.js", "MongoDB", "Redux"],
+    image: "/portfolio/paf-token.png",
   }
 ];
 
@@ -104,7 +102,7 @@ export default function PortfolioPage() {
             <div className="max-w-3xl">
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6">
                 Our{" "}
-                <span className="italic font-serif text-primary-400">Portfolio</span>
+                <span className="italic font-serif text-primary-400 gradient-text">Portfolio</span>
               </h1>
               <p className="text-xl text-white/60">
                 A showcase of projects we&apos;ve delivered for clients across various industries.
@@ -135,35 +133,29 @@ export default function PortfolioPage() {
 
         <section className="py-16 bg-dark-200">
           <div className="container mx-auto px-6 lg:px-8">
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 pt-4">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 pt-4">
               {filteredProjects.map((project) => (
                 <div
                   key={project.title}
                   className="group glass cursor-pointer overflow-hidden"
                 >
-                  <div className="aspect-[16/10] overflow-hidden">
+                  <div className="aspect-[16/10] overflow-hidden bg-dark-300">
                     <img
                       src={project.image}
                       alt={project.title}
-                      className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-110"
+                      className="w-full h-full object-contain object-center transition-transform duration-500 group-hover:scale-110"
                     />
                   </div>
-                  <div className="p-5">
-                    <span
-                      className="text-xs font-medium uppercase tracking-wider"
-                      style={{ color: project.color }}
-                    >
-                      {project.category}
-                    </span>
-                    <h3 className="text-xl font-bold text-white mt-2 mb-3 group-hover:text-primary-400 transition-colors">
+                  <div className="p-4">
+                    <h3 className="text-lg font-bold text-white mb-2 group-hover:text-primary-400 transition-colors">
                       {project.title}
                     </h3>
-                    <p className="text-white/60 text-sm mb-4">{project.description}</p>
-                    <div className="flex flex-wrap gap-2">
+                    <p className="text-white/60 text-xs mb-3 leading-relaxed">{project.description}</p>
+                    <div className="flex flex-wrap gap-1.5">
                       {project.technologies.map((tech) => (
                         <span
                           key={tech}
-                          className="text-xs px-3 py-1 rounded-full bg-white/5 text-white/60"
+                          className="text-[10px] px-2 py-0.5 rounded-full bg-white/5 text-white/60"
                         >
                           {tech}
                         </span>
@@ -180,7 +172,7 @@ export default function PortfolioPage() {
           <div className="container mx-auto px-6 lg:px-8 text-center">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Want to See Your Project{" "}
-              <span className="italic font-serif text-primary-400">Here</span>?
+              <span className="italic font-serif text-primary-400 gradient-text">Here</span>?
             </h2>
             <p className="text-lg text-white/60 mb-10 max-w-xl mx-auto">
               Let&apos;s work together to build something amazing.

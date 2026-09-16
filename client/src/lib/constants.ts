@@ -45,6 +45,27 @@ export const SERVICES = [
     icon: "ShoppingCart",
     accentColor: "#977bf2",
     features: ["Product Catalogs", "Payment Integration", "Inventory Management", "Order Processing"]
+  },
+  {
+    title: "WordPress Development",
+    description: "Custom WordPress sites and themes with WooCommerce integration, plugin development, and performance optimization.",
+    icon: "WordPress",
+    accentColor: "#38BDF8",
+    features: ["Custom Themes", "WooCommerce", "Plugin Development"]
+  },
+  {
+    title: "Framer Development",
+    description: "High-converting, animated landing pages and marketing sites built in Framer with CMS integration and responsive design.",
+    icon: "Framer",
+    accentColor: "#A855F7",
+    features: ["Landing Pages", "CMS Integration", "Animations"]
+  },
+  {
+    title: "Webflow Development",
+    description: "Pixel-perfect, no-code websites built in Webflow with custom interactions, CMS collections, and SEO-ready structure.",
+    icon: "Webflow",
+    accentColor: "#F43F5E",
+    features: ["Custom Interactions", "CMS Collections", "SEO Optimized"]
   }
 ];
 
@@ -80,6 +101,7 @@ export const TESTIMONIALS = [
     authorRole: "Client",
     authorCompany: "United Kingdom",
     country: "United Kingdom",
+    countryCode: "gb",
     flag: "🇬🇧"
   },
   {
@@ -88,6 +110,7 @@ export const TESTIMONIALS = [
     authorRole: "Client",
     authorCompany: "Australia",
     country: "Australia",
+    countryCode: "au",
     flag: "🇦🇺"
   },
   {
@@ -96,6 +119,7 @@ export const TESTIMONIALS = [
     authorRole: "Client",
     authorCompany: "United Kingdom",
     country: "United Kingdom",
+    countryCode: "gb",
     flag: "🇬🇧"
   },
   {
@@ -104,6 +128,7 @@ export const TESTIMONIALS = [
     authorRole: "Client",
     authorCompany: "United States",
     country: "United States",
+    countryCode: "us",
     flag: "🇺🇸"
   },
   {
@@ -112,6 +137,7 @@ export const TESTIMONIALS = [
     authorRole: "Client",
     authorCompany: "United States",
     country: "United States",
+    countryCode: "us",
     flag: "🇺🇸"
   }
 ];

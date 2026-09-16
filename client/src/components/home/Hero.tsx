@@ -89,7 +89,7 @@ export default function Hero() {
                   <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.1] tracking-tight">
                     {slide.title}
                     <br />
-                    <span className="italic font-serif text-primary-400 font-normal">{slide.accent}</span>
+                    <span className="italic font-serif text-primary-400 gradient-text font-normal">{slide.accent}</span>
                     <br />
                     {slide.subtitle}
                   </h1>

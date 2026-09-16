@@ -14,7 +14,7 @@ export default function ProcessSteps() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            How <span className="italic font-serif text-primary-400">We Work</span>
+            How <span className="italic font-serif text-primary-400 gradient-text">We Work</span>
           </h2>
           <p className="text-white/60 max-w-2xl mx-auto">
             Our streamlined process ensures we deliver exceptional results every time
