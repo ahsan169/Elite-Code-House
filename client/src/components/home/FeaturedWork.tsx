@@ -4,33 +4,7 @@ import { useRef, useCallback } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Button from "@/components/ui/Button";
-
-const projects = [
-  {
-    title: "AI Finance Dashboard",
-    category: "AI",
-    image: "/portfolio/ai-finance.png",
-    color: "#7ddafc"
-  },
-  {
-    title: "SecureBank Mobile",
-    category: "Mobile",
-    image: "/portfolio/securebank.png",
-    color: "#b7fe02"
-  },
-  {
-    title: "LeadGen Pro",
-    category: "SaaS",
-    image: "/portfolio/flight-prediction.png",
-    color: "#fe86a6"
-  },
-  {
-    title: "Apex Manufacturing CRM",
-    category: "SaaS",
-    image: "/portfolio/asset-library.png",
-    color: "#977bf2"
-  }
-];
+import { PORTFOLIO_PROJECTS } from "@/lib/constants";
 
 export default function FeaturedWork() {
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -91,7 +65,7 @@ export default function FeaturedWork() {
           className="overflow-x-scroll-y-visible scrollbar-hide -mx-6 px-6 lg:-mx-8 lg:px-8 pt-4 -mt-4"
         >
           <div className="flex gap-6 pb-4">
-            {projects.map((project, index) => (
+            {PORTFOLIO_PROJECTS.map((project, index) => (
               <motion.div
                 key={project.title}
                 initial={{ opacity: 0, y: 30 }}
@@ -107,39 +81,6 @@ export default function FeaturedWork() {
                       alt={project.title}
                       className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105 group-hover:translate-x-2"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-
-                    <div className="absolute inset-0 flex flex-col justify-end p-8">
-                      <span
-                        className="text-sm font-medium mb-2"
-                        style={{ color: project.color }}
-                      >
-                        {project.category}
-                      </span>
-                      <h3 className="text-2xl font-bold text-white group-hover:text-primary-400 transition-colors">
-                        {project.title}
-                      </h3>
-                    </div>
-
-                    <div
-                      className="absolute top-4 right-4 w-12 h-12 rounded-full opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center"
-                      style={{ backgroundColor: `${project.color}20` }}
-                    >
-                      <svg
-                        className="w-5 h-5"
-                        style={{ color: project.color }}
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M14 5l7 7m0 0l-7 7m7-7H3"
-                        />
-                      </svg>
-                    </div>
                   </div>
                 </Link>
               </motion.div>

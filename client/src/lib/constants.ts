@@ -141,3 +141,76 @@ export const TESTIMONIALS = [
     flag: "🇺🇸"
   }
 ];
+
+export const PORTFOLIO_PROJECTS = [
+  {
+    title: "AI Finance Dashboard",
+    category: "ai",
+    description: "Smart financial dashboard with AI-powered insights, cash flow analysis, and spending category breakdowns.",
+    technologies: ["React", "Node.js", "AI/ML", "Charts"],
+    image: "/portfolio/securebank.png",
+  },
+  {
+    title: "SecureBank Mobile",
+    category: "mobile",
+    description: "Full-featured mobile banking app with account management, transactions, and fund transfers.",
+    technologies: ["React Native", "Node.js", "MongoDB", "Stripe"],
+    image: "/portfolio/housing-prediction.png",
+  },
+  {
+    title: "LeadGen Pro",
+    category: "saas",
+    description: "Company research and lead generation tool with advanced search, enrichment, and bulk export capabilities.",
+    technologies: ["React", "Express", "MongoDB", "REST API"],
+    image: "/portfolio/flight-prediction.png",
+  },
+  {
+    title: "Apex Manufacturing CRM",
+    category: "saas",
+    description: "Sales pipeline management with Kanban view, quote generation, and opportunity tracking for manufacturers.",
+    technologies: ["React", "Node.js", "MongoDB", "WebSocket"],
+    image: "/portfolio/asset-library.png",
+  },
+  {
+    title: "Housing Price Prediction",
+    category: "ai",
+    description: "ML-powered housing price prediction dashboard comparing Linear Regression, Decision Tree, Random Forest, and XGBoost models.",
+    technologies: ["Python", "TensorFlow", "React", "D3.js"],
+    image: "/portfolio/ai-finance.png",
+  },
+  {
+    title: "Flight Delay Prediction",
+    category: "ai",
+    description: "Machine learning app predicting flight delays with probability analysis and performance overview charts.",
+    technologies: ["Python", "Scikit-learn", "React", "Recharts"],
+    image: "/portfolio/leadgen-pro.png",
+  },
+  {
+    title: "PAF Token Platform",
+    category: "web",
+    description: "Crypto token platform with roadmap visualization, referral system, and whitepaper integration.",
+    technologies: ["Next.js", "Web3.js", "Solidity", "Tailwind"],
+    image: "/portfolio/paf-token-platform.png",
+  },
+  {
+    title: "Asset Library",
+    category: "web",
+    description: "Document management system with categorization, tagging, and organization-level access control.",
+    technologies: ["React", "Node.js", "MongoDB", "File Upload"],
+    image: "/portfolio/apex-manufacturing.png",
+  },
+  {
+    title: "WP/WC Sync API",
+    category: "web",
+    description: "Multi-language API middleware for WordPress & WooCommerce with i18n JSON support and template transformation.",
+    technologies: ["Node.js", "Express", "WordPress API", "i18n"],
+    image: "/portfolio/wpwc-sync-api.png",
+  },
+  {
+    title: "Mobile App Platform",
+    category: "mobile",
+    description: "Modern e-commerce mobile application with product browsing, advanced filtering, and personalized discovery features.",
+    technologies: ["React Native", "Node.js", "MongoDB", "Redux"],
+    image: "/portfolio/paf-token.png",
+  }
+];
