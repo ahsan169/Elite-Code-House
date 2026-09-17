@@ -79,7 +79,7 @@ export default function FeaturedWork() {
                     <img
                       src={project.image}
                       alt={project.title}
-                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105 group-hover:translate-x-2"
+                      className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105 group-hover:translate-x-2"
                     />
                   </div>
                 </Link>

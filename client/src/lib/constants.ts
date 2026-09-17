@@ -186,6 +186,20 @@ export const PORTFOLIO_PROJECTS = [
     image: "/portfolio/leadgen-pro.png",
   },
   {
+    title: "D.CC Restaurant Management",
+    category: "saas",
+    description: "Restaurant operations dashboard with real-time order tracking, table management, revenue analytics, and top-dish performance insights.",
+    technologies: ["React", "Dashboard UI", "Analytics"],
+    image: "/portfolio/dcc-dashboard.png",
+  },
+  {
+    title: "Dr Dental Clinic Website",
+    category: "web",
+    description: "Modern dental clinic marketing site with service booking, treatment breakdowns, and a clean patient-first layout.",
+    technologies: ["Next.js", "Booking System", "Responsive Design"],
+    image: "/portfolio/dr-dental.png",
+  },
+  {
     title: "PAF Token Platform",
     category: "web",
     description: "Crypto token platform with roadmap visualization, referral system, and whitepaper integration.",
@@ -205,6 +219,13 @@ export const PORTFOLIO_PROJECTS = [
     description: "Multi-language API middleware for WordPress & WooCommerce with i18n JSON support and template transformation.",
     technologies: ["Node.js", "Express", "WordPress API", "i18n"],
     image: "/portfolio/wpwc-sync-api.png",
+  },
+  {
+    title: "LearnLoop E-Learning Platform",
+    category: "web",
+    description: "Online learning platform landing page with coaching session booking, live help prompts, and a warm, approachable brand identity.",
+    technologies: ["React", "Landing Page", "UX Design"],
+    image: "/portfolio/learnloop.png",
   },
   {
     title: "Mobile App Platform",
