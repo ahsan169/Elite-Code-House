@@ -68,7 +68,7 @@ export default function ContactPage() {
             <div className="max-w-3xl">
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6">
                 Get in{" "}
-                <span className="italic font-serif text-primary-400 gradient-text">Touch</span>
+                <span className="italic font-serif text-primary-400">Touch</span>
               </h1>
               <p className="text-xl text-white/60">
                 Have a project in mind? We&apos;d love to hear about it. Send us a
@@ -300,7 +300,7 @@ export default function ContactPage() {
           <div className="container mx-auto px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Or <span className="italic font-serif text-primary-400 gradient-text">Schedule a Call</span> Directly
+                Or <span className="italic font-serif text-primary-400">Schedule a Call</span> Directly
               </h2>
               <p className="text-white/60 max-w-xl mx-auto">
                 Pick a time that works for you. Our team is available Monday through Friday, 9 AM to 6 PM EST.
@@ -319,7 +319,7 @@ export default function ContactPage() {
           <div className="container mx-auto px-6 lg:px-8">
             <div className="max-w-2xl mx-auto text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                <span className="italic font-serif text-primary-400 gradient-text">Instant</span> Live Call
+                <span className="italic font-serif text-primary-400">Instant</span> Live Call
               </h2>
               <p className="text-white/60">
                 Need to talk now? Start an instant audio or video call with our team. No scheduling required.

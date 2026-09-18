@@ -19,7 +19,7 @@ export default function AboutPreview() {
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
               Building Digital
               <br />
-              <span className="italic font-serif text-primary-400 gradient-text">Excellence</span>
+              <span className="italic font-serif text-primary-400">Excellence</span>
               <br />
               Since 2021
             </h2>
@@ -39,16 +39,16 @@ export default function AboutPreview() {
 
             <div className="grid grid-cols-3 gap-6 mb-8">
               <div className="glass-stat text-center p-4">
-                <Counter target={300} suffix="+" className="text-3xl font-bold text-white mb-1" />
-                <div className="text-xs text-white/60">Projects</div>
+                <Counter target={50} suffix="+" className="text-3xl font-bold text-white mb-1" />
+                <div className="text-xs text-white/60">Technologies</div>
               </div>
               <div className="glass-stat text-center p-4">
-                <Counter target={300} suffix="+" className="text-3xl font-bold text-white mb-1" />
-                <div className="text-xs text-white/60">Clients</div>
+                <div className="text-3xl font-bold text-white mb-1">100%</div>
+                <div className="text-xs text-white/60">Client Satisfaction</div>
               </div>
               <div className="glass-stat text-center p-4">
-                <div className="text-3xl font-bold text-white mb-1">5+</div>
-                <div className="text-xs text-white/60">Years</div>
+                <Counter target={10} suffix="+" className="text-3xl font-bold text-white mb-1" />
+                <div className="text-xs text-white/60">Industries Served</div>
               </div>
             </div>
 

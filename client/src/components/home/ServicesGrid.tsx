@@ -34,7 +34,7 @@ export default function ServicesGrid() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Our <span className="italic font-serif text-primary-400 gradient-text">Services</span>
+            Our <span className="italic font-serif text-primary-400">Services</span>
           </h2>
           <p className="text-white/60 max-w-2xl mx-auto">
             End-to-end development solutions tailored to your business needs

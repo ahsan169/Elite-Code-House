@@ -40,7 +40,7 @@ export default function FeaturedWork() {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              Featured <span className="italic font-serif text-primary-400 gradient-text">Work</span>
+              Featured <span className="italic font-serif text-primary-400">Work</span>
             </h2>
             <p className="text-white/60 max-w-lg">
               A selection of projects we&apos;re proud of
@@ -75,7 +75,7 @@ export default function FeaturedWork() {
                 className="flex-shrink-0 w-[320px] md:w-[400px]"
               >
                 <Link href="/portfolio">
-                  <div className="group relative h-64 md:h-80 rounded-2xl overflow-hidden cursor-pointer">
+                  <div className="group relative h-64 md:h-80 rounded-2xl overflow-hidden cursor-pointer border border-white/10 shadow-lg shadow-black/20 group-hover:shadow-primary-500/15 transition-shadow duration-500">
                     <img
                       src={project.image}
                       alt={project.title}

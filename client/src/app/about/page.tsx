@@ -60,7 +60,7 @@ export default function AboutPage() {
             <div className="max-w-3xl">
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6">
                 About{" "}
-                <span className="italic font-serif text-primary-400 gradient-text">Us</span>
+                <span className="italic font-serif text-primary-400">Us</span>
               </h1>
               <p className="text-xl text-white/60">
                 We&apos;re a team of passionate developers building digital products
@@ -77,7 +77,7 @@ export default function AboutPage() {
               <div>
                 <h2 className="text-4xl font-bold text-white mb-6">
                   Our{" "}
-                  <span className="italic font-serif text-primary-400 gradient-text">Story</span>
+                  <span className="italic font-serif text-primary-400">Story</span>
                 </h2>
                 <p className="text-white/60 mb-4">
                   Founded in 2021, Elite Code House started with a simple mission:
@@ -123,7 +123,7 @@ export default function AboutPage() {
           <div className="container mx-auto px-6 lg:px-8">
             <h2 className="text-4xl font-bold text-white text-center mb-16">
               Our{" "}
-              <span className="italic font-serif text-primary-400 gradient-text">Values</span>
+              <span className="italic font-serif text-primary-400">Values</span>
             </h2>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 pt-4 -mt-4">
@@ -145,7 +145,7 @@ export default function AboutPage() {
           <div className="container mx-auto px-6 lg:px-8">
             <h2 className="text-4xl font-bold text-white text-center mb-16">
               Meet the{" "}
-              <span className="italic font-serif text-primary-400 gradient-text">Team</span>
+              <span className="italic font-serif text-primary-400">Team</span>
             </h2>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -172,7 +172,7 @@ export default function AboutPage() {
           <div className="container mx-auto px-6 lg:px-8 text-center">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Want to Work With{" "}
-              <span className="italic font-serif text-primary-400 gradient-text">Us</span>?
+              <span className="italic font-serif text-primary-400">Us</span>?
             </h2>
             <p className="text-lg text-white/60 mb-10 max-w-xl mx-auto">
               We&apos;re always looking for talented people to join our team.

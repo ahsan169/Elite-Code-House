@@ -38,7 +38,7 @@ export default function BlogPreview() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Latest <span className="italic font-serif text-primary-400 gradient-text">Insights</span>
+            Latest <span className="italic font-serif text-primary-400">Insights</span>
           </h2>
           <p className="text-white/60 max-w-2xl mx-auto">
             Stay updated with our latest thoughts on technology and development

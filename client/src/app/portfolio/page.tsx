@@ -30,7 +30,7 @@ export default function PortfolioPage() {
             <div className="max-w-3xl">
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6">
                 Our{" "}
-                <span className="italic font-serif text-primary-400 gradient-text">Portfolio</span>
+                <span className="italic font-serif text-primary-400">Portfolio</span>
               </h1>
               <p className="text-xl text-white/60">
                 A showcase of projects we&apos;ve delivered for clients across various industries.
@@ -100,7 +100,7 @@ export default function PortfolioPage() {
           <div className="container mx-auto px-6 lg:px-8 text-center">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Want to See Your Project{" "}
-              <span className="italic font-serif text-primary-400 gradient-text">Here</span>?
+              <span className="italic font-serif text-primary-400">Here</span>?
             </h2>
             <p className="text-lg text-white/60 mb-10 max-w-xl mx-auto">
               Let&apos;s work together to build something amazing.

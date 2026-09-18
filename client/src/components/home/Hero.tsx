@@ -30,26 +30,22 @@ const teamMembers = [
   {
     name: "Alex Johnson",
     role: "Full-Stack Developer",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
-    color: "#7ddafc"
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face"
   },
   {
     name: "Sarah Williams",
     role: "UI/UX Designer",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop&crop=face",
-    color: "#977bf2"
+    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop&crop=face"
   },
   {
     name: "Michael Chen",
     role: "Backend Engineer",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face",
-    color: "#b7fe02"
+    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face"
   },
   {
     name: "Emily Davis",
     role: "Project Manager",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face",
-    color: "#fe86a6"
+    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face"
   }
 ];
 
@@ -142,11 +138,7 @@ export default function Hero() {
                 className="absolute top-[15%] left-[10%] z-20"
               >
                 <div className="relative group">
-                  <div
-                    className="absolute -inset-1 rounded-3xl opacity-60 group-hover:opacity-80 transition-opacity duration-500"
-                    style={{ backgroundColor: teamMembers[0].color }}
-                  />
-                  <div className="relative w-44 h-52 rounded-3xl overflow-hidden border-2 border-white/10">
+                  <div className="relative w-44 h-52 rounded-3xl overflow-hidden border border-white/10 shadow-lg shadow-black/20 group-hover:shadow-primary-500/10 transition-shadow duration-500">
                     <img
                       src={teamMembers[0].image}
                       alt={teamMembers[0].name}
@@ -164,11 +156,7 @@ export default function Hero() {
                 className="absolute top-[15%] right-[10%] z-30"
               >
                 <div className="relative group">
-                  <div
-                    className="absolute -inset-1 rounded-3xl opacity-60 group-hover:opacity-80 transition-opacity duration-500"
-                    style={{ backgroundColor: teamMembers[1].color }}
-                  />
-                  <div className="relative w-44 h-52 rounded-3xl overflow-hidden border-2 border-white/10">
+                  <div className="relative w-44 h-52 rounded-3xl overflow-hidden border border-white/10 shadow-lg shadow-black/20 group-hover:shadow-primary-500/10 transition-shadow duration-500">
                     <img
                       src={teamMembers[1].image}
                       alt={teamMembers[1].name}
@@ -186,11 +174,7 @@ export default function Hero() {
                 className="absolute bottom-[20%] left-[5%] z-10"
               >
                 <div className="relative group">
-                  <div
-                    className="absolute -inset-1 rounded-3xl opacity-60 group-hover:opacity-80 transition-opacity duration-500"
-                    style={{ backgroundColor: teamMembers[2].color }}
-                  />
-                  <div className="relative w-32 h-40 rounded-3xl overflow-hidden border-2 border-white/10">
+                  <div className="relative w-32 h-40 rounded-3xl overflow-hidden border border-white/10 shadow-lg shadow-black/20 group-hover:shadow-primary-500/10 transition-shadow duration-500">
                     <img
                       src={teamMembers[2].image}
                       alt={teamMembers[2].name}
@@ -208,11 +192,7 @@ export default function Hero() {
                 className="absolute bottom-[20%] right-[22%] z-20"
               >
                 <div className="relative group">
-                  <div
-                    className="absolute -inset-1 rounded-3xl opacity-60 group-hover:opacity-80 transition-opacity duration-500"
-                    style={{ backgroundColor: teamMembers[3].color }}
-                  />
-                  <div className="relative w-32 h-40 rounded-3xl overflow-hidden border-2 border-white/10">
+                  <div className="relative w-32 h-40 rounded-3xl overflow-hidden border border-white/10 shadow-lg shadow-black/20 group-hover:shadow-primary-500/10 transition-shadow duration-500">
                     <img
                       src={teamMembers[3].image}
                       alt={teamMembers[3].name}

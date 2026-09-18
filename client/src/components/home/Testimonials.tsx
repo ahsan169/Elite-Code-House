@@ -56,7 +56,7 @@ export default function Testimonials() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Client <span className="italic font-serif text-primary-400 gradient-text">Stories</span>
+            Client <span className="italic font-serif text-primary-400">Stories</span>
           </h2>
           <p className="text-white/60 max-w-2xl mx-auto">
             What our clients say about working with us
