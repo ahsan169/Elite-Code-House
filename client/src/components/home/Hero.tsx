@@ -28,24 +28,28 @@ const heroSlides = [
 
 const teamMembers = [
   {
-    name: "Alex Johnson",
-    role: "Full-Stack Developer",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face"
+    name: "Ahsan",
+    role: "Founder",
+    image: "/portfolio/team-member.png",
+    placeholder: false
   },
   {
-    name: "Sarah Williams",
-    role: "UI/UX Designer",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop&crop=face"
+    name: "Wasif",
+    role: "Co-Founder",
+    image: "/portfolio/cofounder.png",
+    placeholder: false
   },
   {
-    name: "Michael Chen",
-    role: "Backend Engineer",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face"
+    name: "Coming Soon",
+    role: "",
+    image: "",
+    placeholder: true
   },
   {
-    name: "Emily Davis",
-    role: "Project Manager",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face"
+    name: "Coming Soon",
+    role: "",
+    image: "",
+    placeholder: true
   }
 ];
 
@@ -60,15 +64,15 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center bg-dark-300 overflow-hidden">
+    <section className="relative min-h-screen flex items-center bg-dark-300 overflow-hidden pt-[100px]">
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-br from-primary-500/5 via-transparent to-accent-purple/5" />
         <div className="absolute top-1/3 left-1/4 w-[500px] h-[500px] bg-primary-500/8 rounded-full blur-[150px]" />
         <div className="absolute bottom-1/3 right-1/4 w-[400px] h-[400px] bg-accent-purple/8 rounded-full blur-[150px]" />
       </div>
 
-      <div className="container mx-auto px-6 lg:px-8 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center min-h-screen">
+      <div className="container mx-auto relative z-10" style={{ padding: "0 clamp(1.5rem, 4vw, 2rem)" }}>
+        <div className="grid lg:grid-cols-2 items-center min-h-screen" style={{ gap: "clamp(2rem, 5vw, 3rem)" }}>
           <div className="flex flex-col justify-center py-24 lg:py-0">
             <div className="relative h-[180px] md:h-[200px]">
               {heroSlides.map((slide, index) => (
@@ -82,7 +86,7 @@ export default function Hero() {
                   transition={{ duration: 0.5 }}
                   className="absolute inset-0"
                 >
-                  <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.1] tracking-tight">
+                  <h1 className="font-bold text-white leading-[1.1] tracking-tight" style={{ fontSize: "clamp(2rem, 4.5vw, 3.75rem)" }}>
                     {slide.title}
                     <br />
                     <span className="italic font-serif text-primary-400 gradient-text font-normal">{slide.accent}</span>
@@ -97,7 +101,8 @@ export default function Hero() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.2 }}
-              className="text-lg text-white/50 max-w-md mt-6 mb-8 leading-relaxed"
+              className="text-white/50 leading-relaxed"
+              style={{ fontSize: "clamp(0.95rem, 1.5vw, 1.125rem)", maxWidth: "clamp(20rem, 30vw, 28rem)", marginTop: "clamp(1rem, 2vw, 1.5rem)", marginBottom: "clamp(1.5rem, 3vw, 2rem)" }}
             >
               {heroSlides[currentSlide].description}
             </motion.p>
@@ -106,7 +111,8 @@ export default function Hero() {
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
-              className="flex flex-wrap gap-4"
+              className="flex flex-wrap"
+              style={{ gap: "clamp(0.75rem, 1.5vw, 1rem)" }}
             >
               <Link href="/contact">
                 <Button variant="primary" size="lg">
@@ -121,84 +127,99 @@ export default function Hero() {
             </motion.div>
           </div>
 
-          <div className="relative hidden lg:flex items-center justify-center h-[600px]">
+          <div className="relative hidden lg:flex items-center justify-center" style={{ height: "clamp(35rem, 45vw, 37.5rem)" }}>
             <div className="relative w-full h-full">
               {/* Background decoration */}
               <motion.div
                 animate={{ rotate: 360 }}
                 transition={{ duration: 50, repeat: Infinity, ease: "linear" }}
-                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] rounded-full border border-white/[0.03]"
+                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#38BDF8]/15"
+                style={{ width: "clamp(20rem, 30vw, 25rem)", height: "clamp(20rem, 30vw, 25rem)" }}
               />
 
-               {/* Main image - Large */}
+              {/* Photo 1 - Large (Founder) */}
               <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
                 transition={{ delay: 0.4, duration: 0.7 }}
-                className="absolute top-[15%] left-[10%] z-20"
+                className="absolute top-[10%] left-[8%] z-20"
               >
                 <div className="relative group">
-                  <div className="relative w-44 h-52 rounded-3xl overflow-hidden border border-white/10 shadow-lg shadow-black/20 group-hover:shadow-primary-500/10 transition-shadow duration-500">
+                  <div className="rounded-3xl overflow-hidden border-2 border-[#38BDF8]/40 shadow-lg shadow-black/20 group-hover:border-[#38BDF8]/80 group-hover:shadow-[#38BDF8]/15 transition-all duration-300"
+                    style={{ width: "clamp(10rem, 13vw, 11rem)", height: "clamp(12rem, 15.5vw, 13rem)" }}>
                     <img
                       src={teamMembers[0].image}
                       alt={teamMembers[0].name}
-                      className="w-full h-full object-cover"
+                      width={176}
+                      height={208}
+                      className="w-full h-full object-cover hero-photo"
                     />
+                  </div>
+                  {/* Desktop hover tooltip */}
+                  <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap">
+                    <div className="px-3 py-1.5 rounded-full bg-dark-300/90 backdrop-blur-md border border-[#38BDF8]/30 text-xs">
+                      <span className="text-white font-medium">{teamMembers[0].name}</span>
+                      <span className="text-[#38BDF8] ml-1.5">{teamMembers[0].role}</span>
+                    </div>
                   </div>
                 </div>
               </motion.div>
 
-               {/* Second image - Large (mirrors first) */}
+              {/* Photo 2 - Large (Co-Founder) */}
               <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
                 transition={{ delay: 0.6, duration: 0.7 }}
-                className="absolute top-[15%] right-[10%] z-30"
+                className="absolute top-[10%] right-[8%] z-30"
               >
                 <div className="relative group">
-                  <div className="relative w-44 h-52 rounded-3xl overflow-hidden border border-white/10 shadow-lg shadow-black/20 group-hover:shadow-primary-500/10 transition-shadow duration-500">
+                  <div className="rounded-3xl overflow-hidden border-2 border-[#38BDF8]/40 shadow-lg shadow-black/20 group-hover:border-[#38BDF8]/80 group-hover:shadow-[#38BDF8]/15 transition-all duration-300"
+                    style={{ width: "clamp(10rem, 13vw, 11rem)", height: "clamp(12rem, 15.5vw, 13rem)" }}>
                     <img
                       src={teamMembers[1].image}
                       alt={teamMembers[1].name}
-                      className="w-full h-full object-cover"
+                      width={176}
+                      height={208}
+                      className="w-full h-full object-cover hero-photo"
                     />
+                  </div>
+                  {/* Desktop hover tooltip */}
+                  <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap">
+                    <div className="px-3 py-1.5 rounded-full bg-dark-300/90 backdrop-blur-md border border-[#38BDF8]/30 text-xs">
+                      <span className="text-white font-medium">{teamMembers[1].name}</span>
+                      <span className="text-[#38BDF8] ml-1.5">{teamMembers[1].role}</span>
+                    </div>
                   </div>
                 </div>
               </motion.div>
 
-               {/* Third image - Small */}
+              {/* Photo 3 - Small (Placeholder) */}
               <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
                 transition={{ delay: 0.8, duration: 0.7 }}
-                className="absolute bottom-[20%] left-[5%] z-10"
+                className="absolute bottom-[18%] left-[5%] z-10"
               >
-                <div className="relative group">
-                  <div className="relative w-32 h-40 rounded-3xl overflow-hidden border border-white/10 shadow-lg shadow-black/20 group-hover:shadow-primary-500/10 transition-shadow duration-500">
-                    <img
-                      src={teamMembers[2].image}
-                      alt={teamMembers[2].name}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
+                <div className="rounded-3xl overflow-hidden border-2 border-dashed border-[#38BDF8]/20 flex items-center justify-center bg-white/[0.02]"
+                  style={{ width: "clamp(7rem, 9.5vw, 8rem)", height: "clamp(9rem, 12vw, 10rem)" }}>
+                  <svg className="w-8 h-8 text-white/15" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                  </svg>
                 </div>
               </motion.div>
 
-               {/* Fourth image - Small (mirrors third) */}
+              {/* Photo 4 - Small (Placeholder) */}
               <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
                 transition={{ delay: 1.0, duration: 0.7 }}
-                className="absolute bottom-[20%] right-[22%] z-20"
+                className="absolute bottom-[18%] right-[18%] z-20"
               >
-                <div className="relative group">
-                  <div className="relative w-32 h-40 rounded-3xl overflow-hidden border border-white/10 shadow-lg shadow-black/20 group-hover:shadow-primary-500/10 transition-shadow duration-500">
-                    <img
-                      src={teamMembers[3].image}
-                      alt={teamMembers[3].name}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
+                <div className="rounded-3xl overflow-hidden border-2 border-dashed border-[#38BDF8]/20 flex items-center justify-center bg-white/[0.02]"
+                  style={{ width: "clamp(7rem, 9.5vw, 8rem)", height: "clamp(9rem, 12vw, 10rem)" }}>
+                  <svg className="w-8 h-8 text-white/15" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                  </svg>
                 </div>
               </motion.div>
 

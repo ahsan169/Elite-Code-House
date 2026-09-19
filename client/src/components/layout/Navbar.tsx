@@ -9,18 +9,55 @@ import CallModal from "./CallModal";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isNavVisible, setIsNavVisible] = useState(true);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isCallDropdownOpen, setIsCallDropdownOpen] = useState(false);
   const [isCallModalOpen, setIsCallModalOpen] = useState(false);
   const [callType, setCallType] = useState<"audio" | "video" | null>(null);
   const pathname = usePathname();
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const lastScrollY = useRef(0);
+  const scrollDelta = useRef(0);
+  const isMobileMenuOpenRef = useRef(false);
+
+  // Keep ref in sync with state
+  useEffect(() => {
+    isMobileMenuOpenRef.current = isMobileMenuOpen;
+  }, [isMobileMenuOpen]);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      const currentY = window.scrollY;
+      setIsScrolled(currentY > 50);
+
+      // Always show nav at top of page or when mobile menu is open
+      if (currentY < 10 || isMobileMenuOpenRef.current) {
+        setIsNavVisible(true);
+        scrollDelta.current = 0;
+        lastScrollY.current = currentY;
+        return;
+      }
+
+      // Calculate scroll direction delta
+      const delta = currentY - lastScrollY.current;
+      scrollDelta.current += delta;
+
+      // Only trigger after threshold to avoid jitter
+      if (Math.abs(scrollDelta.current) > 8) {
+        if (scrollDelta.current > 0) {
+          // Scrolling down
+          setIsNavVisible(false);
+        } else {
+          // Scrolling up
+          setIsNavVisible(true);
+        }
+        scrollDelta.current = 0;
+      }
+
+      lastScrollY.current = currentY;
     };
-    window.addEventListener("scroll", handleScroll);
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -52,19 +89,20 @@ export default function Navbar() {
     <>
       <motion.nav
         initial={{ y: -100 }}
-        animate={{ y: 0 }}
-        transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled ? "glass-dark py-4" : "py-6"
+        animate={{ y: isNavVisible ? 0 : -100 }}
+        transition={{ type: "spring", bounce: 0.1, duration: 0.4 }}
+        className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${
+          isScrolled ? "glass-dark" : ""
         }`}
+        style={{ paddingBlock: isScrolled ? "clamp(0.75rem, 1.5vw, 1rem)" : "clamp(1.25rem, 2.5vw, 1.5rem)" }}
       >
-        <div className="container mx-auto px-6 lg:px-8">
+        <div className="container mx-auto" style={{ padding: "0 clamp(1.5rem, 4vw, 2rem)" }}>
           <div className="flex items-center justify-between">
             <Link href="/" className="text-2xl font-bold text-white">
               Elite<span className="text-primary-500">Code</span>
             </Link>
 
-            <div className="hidden lg:flex items-center gap-8">
+            <div className="hidden lg:flex items-center" style={{ gap: "clamp(1.25rem, 2vw, 2rem)" }}>
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
@@ -80,11 +118,12 @@ export default function Navbar() {
               ))}
             </div>
 
-            <div className="hidden lg:flex items-center gap-3">
+            <div className="hidden lg:flex items-center nav-actions" style={{ gap: "clamp(0.5rem, 1.2vw, 0.875rem)" }}>
               <div className="relative" ref={dropdownRef}>
                 <button
                   onClick={() => setIsCallDropdownOpen(!isCallDropdownOpen)}
-                  className="flex items-center gap-2 px-3 py-2 rounded-xl border border-white/10 bg-white/5 hover:bg-white/10 hover:border-primary-500/50 transition-all duration-300 text-white/70 hover:text-white"
+                  className="flex items-center rounded-xl border border-white/10 bg-white/5 hover:bg-white/10 hover:border-primary-500/50 transition-all duration-300 text-white/70 hover:text-white"
+                  style={{ gap: "clamp(0.3rem, 0.6vw, 0.5rem)", padding: "clamp(0.35rem, 0.7vw, 0.5rem) clamp(0.6rem, 1.2vw, 0.75rem)" }}
                 >
                   <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />

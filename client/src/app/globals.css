@@ -315,3 +315,9 @@
     background-position: 0% center;
   }
 }
+
+/* Hero photo sharp rendering at all zoom levels */
+.hero-photo {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
