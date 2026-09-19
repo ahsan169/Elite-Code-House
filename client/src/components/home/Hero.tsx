@@ -30,7 +30,7 @@ const teamMembers = [
   {
     name: "Ahsan",
     role: "Founder",
-    image: "/portfolio/team-member.png",
+    image: "/portfolio/founder.png",
     placeholder: false
   },
   {

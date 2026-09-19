@@ -39,7 +39,7 @@ export default function PortfolioPage() {
           </div>
         </section>
 
-        <section className="py-12 bg-dark-200 sticky top-20 z-30">
+        <section className="py-12 bg-dark-200">
           <div className="container mx-auto px-6 lg:px-8">
             <div className="flex flex-wrap gap-3">
               {categories.map((cat) => (

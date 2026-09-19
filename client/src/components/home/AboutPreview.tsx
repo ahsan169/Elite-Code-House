@@ -17,11 +17,9 @@ export default function AboutPreview() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
-              Building Digital
+              The Team Behind
               <br />
-              <span className="italic font-serif text-primary-400">Excellence</span>
-              <br />
-              Since 2021
+              <span className="italic font-serif text-primary-400">the Code</span>
             </h2>
           </motion.div>
 
@@ -32,9 +30,9 @@ export default function AboutPreview() {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <p className="text-lg text-white/60 mb-8">
-              We are a team of passionate developers, designers, and strategists who
-              love building digital products that make a difference. From startups to
-              enterprises, we help businesses transform their ideas into reality.
+              We&apos;re a small team that ships production-grade software, not slide
+              decks. If you&apos;ve been burned by an agency that overpromised and
+              underdelivered, that&apos;s exactly the problem we built EliteCode to solve.
             </p>
 
             <div className="grid grid-cols-3 gap-6 mb-8">
